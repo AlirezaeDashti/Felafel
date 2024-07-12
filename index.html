@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Create Account</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="language-switch">
+      <button id="lang-en" onclick="setLanguage('en')">English</button>
+      <button id="lang-fa" onclick="setLanguage('fa')">فارسی</button>
+    </div>
+    <div class="container">
+      <div class="form-container">
+        <h2 data-lang="login-title">Login</h2>
+        <form id="auth-form">
+          <div class="input-group" id="login-fields">
+            <label for="username" data-lang="username-label">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <label for="password" data-lang="password-label">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="input-group hidden" id="create-account-fields">
+            <label for="first-name" data-lang="first-name-label"
+              >First Name:</label
+            >
+            <input type="text" id="first-name" name="first-name" />
+            <label for="last-name" data-lang="last-name-label"
+              >Last Name:</label
+            >
+            <input type="text" id="last-name" name="last-name" />
+            <label for="sex" data-lang="sex-label">Sex:</label>
+            <select id="sex" name="sex">
+              <option value="male" data-lang="male-option">Male</option>
+              <option value="female" data-lang="female-option">Female</option>
+            </select>
+            <label for="create-username" data-lang="create-username-label"
+              >Username:</label
+            >
+            <input type="text" id="create-username" name="create-username" />
+            <label for="create-password" data-lang="create-password-label"
+              >Password:</label
+            >
+            <input
+              type="password"
+              id="create-password"
+              name="create-password"
+            />
+          </div>
+          <div class="button-group">
+            <button type="button" id="login-button" data-lang="login-button">
+              Login
+            </button>
+            <button
+              type="button"
+              id="toggle-create-account-button"
+              data-lang="create-account-button"
+            >
+              Create Account
+            </button>
+            <button
+              type="button"
+              class="hidden"
+              id="submit-create-account-button"
+              data-lang="submit-account-button"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
